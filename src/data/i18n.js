@@ -37,6 +37,10 @@ export const i18n = {
       work: 'Work',
       education: 'Education',
       skipToContent: 'Skip to content',
+      status: 'Status',
+      language: 'Language',
+      stars: 'Stars',
+      updated: 'Updated',
     },
     meta: {
       title: 'Skander Jeddi | Portfolio',
@@ -83,6 +87,10 @@ export const i18n = {
       work: 'Expérience',
       education: 'Formation',
       skipToContent: 'Aller au contenu',
+      status: 'Statut',
+      language: 'Langage',
+      stars: 'Étoiles',
+      updated: 'Mis à jour',
     },
     meta: {
       title: 'Skander Jeddi | Portfolio',

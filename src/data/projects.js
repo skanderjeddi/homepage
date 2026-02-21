@@ -12,6 +12,16 @@ export const projects = [
     github: 'https://github.com/skanderjeddi/unbundle',
     demo: 'https://docs.rs/unbundle',
     demoLabel: 'docs.rs',
+    metadata: {
+      statusEn: 'Active',
+      statusFr: 'Actif',
+      language: 'Rust',
+      stars: 3,
+      forks: 0,
+      license: 'MIT',
+      updatedAt: '2026-02-15T01:24:51Z',
+      repo: 'skanderjeddi/unbundle',
+    },
     featured: true,
   },
   {
@@ -24,8 +34,18 @@ export const projects = [
     descriptionEn:
       'This website — built with Vue 3, Vite, and Tailwind CSS. Data-oriented architecture: all content is decoupled from components and editable from /src/data. Dark mode, responsive layout, and scroll animations.',
     tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/skanderjeddi/', // TODO: add repo URL once public
+    github: 'https://github.com/skanderjeddi/Homepage',
     demo: null,
+    metadata: {
+      statusEn: 'Active',
+      statusFr: 'Actif',
+      language: 'Vue',
+      stars: 0,
+      forks: 0,
+      license: null,
+      updatedAt: '2026-02-21T20:45:29Z',
+      repo: 'skanderjeddi/Homepage',
+    },
     featured: true,
   },
 ]

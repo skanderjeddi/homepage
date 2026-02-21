@@ -17,6 +17,16 @@ const props = defineProps<{
     github: string
     demo?: string | null
     demoLabel?: string
+    metadata?: {
+      statusEn?: string
+      statusFr?: string
+      language?: string
+      stars?: number
+      forks?: number
+      license?: string | null
+      updatedAt?: string
+      repo?: string
+    }
   }
 }>()
 
@@ -36,6 +46,26 @@ const description = computed(() => {
 const stack = computed(() => props.project.tags ?? props.project.tech ?? [])
 
 const demoLabel = computed(() => props.project.demoLabel ?? copy.value.labels.liveDemo)
+
+const localizedStatus = computed(() => {
+  const metadata = props.project.metadata
+  if (!metadata) return null
+  return isFrench.value ? (metadata.statusFr ?? metadata.statusEn ?? null) : (metadata.statusEn ?? metadata.statusFr ?? null)
+})
+
+const updatedDate = computed(() => {
+  const updatedAt = props.project.metadata?.updatedAt
+  if (!updatedAt) return null
+
+  const date = new Date(updatedAt)
+  if (Number.isNaN(date.getTime())) return null
+
+  return date.toLocaleDateString(locale.value === 'fr' ? 'fr-FR' : 'en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+})
 </script>
 
 <template>
@@ -52,6 +82,25 @@ const demoLabel = computed(() => props.project.demoLabel ?? copy.value.labels.li
         {{ techItem }}
       </li>
     </ul>
+
+    <dl v-if="project.metadata" class="mt-4 grid grid-cols-2 gap-2 text-xs">
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.status }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ localizedStatus ?? '—' }}</dd>
+      </div>
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.language }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ project.metadata.language ?? '—' }}</dd>
+      </div>
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.stars }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ project.metadata.stars ?? 0 }}</dd>
+      </div>
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.updated }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ updatedDate ?? '—' }}</dd>
+      </div>
+    </dl>
 
     <div class="mt-5 flex items-center gap-3">
       <a

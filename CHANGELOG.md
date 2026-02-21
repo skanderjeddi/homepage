@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added full bilingual support (English/French) with a persistent language toggle and localized UI labels.
 - Added locale-aware SEO metadata updates at runtime for title and Open Graph descriptions.
 - Added EN/FR content variants in personal, projects, and CV data with backwards-compatible fallbacks.
+- Added project repository metadata (status, language, stars, updated date) to project cards.
+
+### Changed
+
+- Refined dark theme palette to neutral zinc tones while preserving subtle accent parity for key elements.
+- Improved avatar framing controls via data-driven `avatarPosition`.
+- Updated README to reflect the actual portfolio architecture, scripts, and customization workflow.
 
 ## [0.1.0] - 2026-02-21
 
