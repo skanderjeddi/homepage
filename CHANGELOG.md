@@ -11,3 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project audit completed for repository state, source structure, and installed dependencies.
 - Added required dependencies for portfolio implementation: Vue Router, Pinia, and Tailwind CSS.
 - Initialized project changelog using Keep a Changelog format.
+- Added editable portfolio data sources in `src/data/personal.js`, `src/data/projects.js`, and `src/data/cv.js`.
