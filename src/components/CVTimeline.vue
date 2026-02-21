@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { i18n } from '@/data/i18n.js'
+import { locale } from '@/stores/locale'
+
 defineProps<{
   entries: {
     id: string
@@ -10,21 +14,23 @@ defineProps<{
     summary: string
   }[]
 }>()
+
+const copy = computed(() => i18n[locale.value])
 </script>
 
 <template>
   <ol class="relative border-s border-slate-300 pl-6 dark:border-slate-700">
     <li v-for="entry in entries" :key="entry.id" class="relative mb-8 last:mb-0">
       <span
-        class="absolute -start-[31px] mt-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full ring-4 ring-white dark:ring-slate-950"
+        class="absolute -start-[31px] mt-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full ring-4 ring-white dark:ring-slate-900"
         :class="entry.type === 'work' ? 'bg-indigo-500' : 'bg-emerald-500'"
         aria-hidden="true"
       ></span>
 
-      <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+      <div class="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <p class="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            {{ entry.type }}
+            {{ entry.type === 'work' ? copy.labels.work : copy.labels.education }}
           </p>
           <p class="text-sm font-medium text-slate-600 dark:text-slate-300">{{ entry.period }}</p>
         </div>

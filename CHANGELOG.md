@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added full bilingual support (English/French) with a persistent language toggle and localized UI labels.
+- Added locale-aware SEO metadata updates at runtime for title and Open Graph descriptions.
+- Added EN/FR content variants in personal, projects, and CV data with backwards-compatible fallbacks.
+
 ## [0.1.0] - 2026-02-21
 
 ### Added

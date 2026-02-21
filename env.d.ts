@@ -9,5 +9,10 @@ declare module '@/data/projects.js' {
 }
 
 declare module '@/data/cv.js' {
+	export const cv: any[]
 	export const cvEntries: any[]
+}
+
+declare module '@/data/i18n.js' {
+	export const i18n: any
 }

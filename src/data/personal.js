@@ -1,22 +1,66 @@
-// TODO: replace with your own data
 export const personal = {
-  name: 'Alex Carter', // TODO: replace with your own data
-  tagline: 'Frontend Developer building fast and accessible web apps.', // TODO: replace with your own data
-  avatar: '/avatar-placeholder.jpg', // TODO: replace with your own image in /public
-  email: 'alex.carter@example.com', // TODO: replace with your own data
-  location: 'Bengaluru, India', // TODO: replace with your own data
-  bio: 'I focus on creating user-first interfaces with Vue and modern tooling. I enjoy shipping maintainable products and collaborating closely with teams.', // TODO: replace with your own data
-  interests: ['UI/UX', 'Open Source', 'Performance'], // TODO: replace with your own data
+  name: 'Skander Jeddi',
+  tagline: 'Développeur passionné · Maths, Algorithmique & Web',
+  taglineEn: 'Passionate developer · Math, Algorithms & Web',
+  avatar: '/avatar.jpg', // drop your photo in /public
+  email: 'skanderjeddi@fastmail.com',
+  location: 'Labruguière, France',
+  bio: `Double master en mathématiques et informatique (Cryptographie) à l'Université Paris Cité.
+J'aime concevoir des solutions robustes qui mêlent rigueur algorithmique et expérience utilisateur soignée.
+Que ce soit du bas niveau en C++ ou une interface Vue.js, j'apporte la même exigence : du code propre, performant et maintenable.`,
+  bioEn: `Dual master’s degree in Mathematics and Computer Science (Cryptography) at Université Paris Cité.
+I enjoy building robust solutions that combine algorithmic rigor with polished user experience.
+From low-level C++ systems to Vue.js interfaces, I apply the same standards: clean, performant, maintainable code.`,
+  interests: [
+    'Développement open-source',
+    'Algorithmique & optimisation',
+    'Intelligence artificielle',
+    'Compétitions de programmation',
+    'Visualisation de données',
+  ],
+  interestsEn: [
+    'Open-source development',
+    'Algorithms & optimization',
+    'Artificial intelligence',
+    'Programming competitions',
+    'Data visualization',
+  ],
   social: {
-    github: 'https://github.com/yourusername', // TODO: replace with your own data
-    linkedin: 'https://linkedin.com/in/yourusername', // TODO: replace with your own data
-    website: 'https://your-website.dev', // TODO: replace with your own data
+    github: 'https://github.com/skanderjeddi',
+    linkedin: 'https://linkedin.com/in/skanderjeddi', // TODO: update if different
+    website: 'https://skanderjeddi.dev', // TODO: update with real URL
   },
   cta: {
-    projectsLabel: 'View Projects',
+    projectsLabel: 'Voir mes projets',
+    projectsLabelEn: 'View my projects',
     projectsTarget: '#projects',
-    cvLabel: 'Download CV',
-    cvHref: '/cv.pdf',
+    cvLabel: 'Télécharger mon CV',
+    cvLabelEn: 'Download CV',
+    cvHref: '/CV.pdf', // drop your CV.pdf in /public
+    cvHrefEn: '/cv.pdf',
   },
-  skills: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Node.js', 'REST APIs'], // TODO: replace with your own data
+  skills: [
+    // Languages
+    'C/C++',
+    'Rust',
+    'Python',
+    'Java',
+    // Web
+    'Vue 3',
+    'TypeScript',
+    'JavaScript',
+    'D3.js',
+    'Tailwind CSS',
+    'HTML/CSS',
+    // Systems & tooling
+    'Git',
+    'Make',
+    'Linux',
+    // CS
+    'Algorithmique avancée',
+    'Programmation concurrente',
+    'Systèmes distribués',
+    'Cryptographie',
+  ],
+  languages: ['Français', 'Anglais', 'Arabe', 'Espagnol'],
 }

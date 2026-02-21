@@ -1,30 +1,31 @@
-// TODO: replace with your own data
 export const projects = [
   {
-    id: 'p-1',
-    title: 'Realtime Team Chat', // TODO: replace with your own data
+    id: 1,
+    title: 'unbundle',
+    titleEn: 'unbundle',
+    titleFr: 'unbundle',
     description:
-      'A realtime chat app with channels, typing indicators, and message reactions built for distributed teams.', // TODO: replace with your own data
-    tech: ['Vue 3', 'Pinia', 'WebSocket', 'Tailwind CSS'], // TODO: replace with your own data
-    github: 'https://github.com/yourusername/realtime-team-chat', // TODO: replace with your own data
-    demo: 'https://demo.example.com/realtime-team-chat', // TODO: replace with your own data
+      'A clean, ergonomic Rust library for extracting video frames, audio tracks, and subtitles from media files via FFmpeg. Features a type-safe API, lazy streaming iterators, progress callbacks, cancellation tokens, and optional hardware-accelerated decoding. Published on crates.io.',
+    descriptionFr:
+      'Une librairie Rust claire et ergonomique pour extraire des images vidéo, pistes audio et sous-titres via FFmpeg. API type-safe, itérateurs lazy, callbacks de progression, tokens d’annulation et décodage accéléré optionnel. Publiée sur crates.io.',
+    tags: ['Rust', 'FFmpeg', 'Systems Programming', 'Open Source', 'crates.io'],
+    github: 'https://github.com/skanderjeddi/unbundle',
+    demo: 'https://docs.rs/unbundle',
+    demoLabel: 'docs.rs',
+    featured: true,
   },
   {
-    id: 'p-2',
-    title: 'Smart Expense Tracker', // TODO: replace with your own data
+    id: 2,
+    title: 'Portfolio Personnel',
+    titleEn: 'Personal Portfolio',
+    titleFr: 'Portfolio Personnel',
     description:
-      'A personal finance dashboard with category budgets, recurring transactions, and trend visualizations.', // TODO: replace with your own data
-    tech: ['Vue 3', 'Chart.js', 'Vite', 'Firebase'], // TODO: replace with your own data
-    github: 'https://github.com/yourusername/smart-expense-tracker', // TODO: replace with your own data
-    demo: 'https://demo.example.com/smart-expense-tracker', // TODO: replace with your own data
-  },
-  {
-    id: 'p-3',
-    title: 'Developer Portfolio Builder', // TODO: replace with your own data
-    description:
-      'A no-code style portfolio generator that lets developers create and publish responsive profile websites quickly.', // TODO: replace with your own data
-    tech: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Netlify'], // TODO: replace with your own data
-    github: 'https://github.com/yourusername/portfolio-builder', // TODO: replace with your own data
-    demo: 'https://demo.example.com/portfolio-builder', // TODO: replace with your own data
+      'Ce site — conçu avec Vue 3, Vite et Tailwind CSS. Architecture orientée données : tout le contenu est découplé des composants et éditable depuis /src/data. Dark mode, responsive, animations au scroll.',
+    descriptionEn:
+      'This website — built with Vue 3, Vite, and Tailwind CSS. Data-oriented architecture: all content is decoupled from components and editable from /src/data. Dark mode, responsive layout, and scroll animations.',
+    tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/skanderjeddi/', // TODO: add repo URL once public
+    demo: null,
+    featured: true,
   },
 ]
