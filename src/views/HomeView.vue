@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
+import CVSection from '@/components/CVSection.vue'
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import ProjectsSection from '@/components/ProjectsSection.vue'
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <section id="cv" class="min-h-[30vh] py-12"></section>
+      <CVSection />
       <section id="contact" class="min-h-[30vh] py-12"></section>
     </main>
   </div>

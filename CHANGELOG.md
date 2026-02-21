@@ -15,3 +15,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added responsive navigation with hamburger menu, smooth section scrolling, and persisted dark mode toggle.
 - Added Hero and About sections sourced from portfolio data, including avatar, CTAs, skills badges, and interests.
 - Added dynamic Projects section with reusable project cards, tech badges, and GitHub/live demo links.
+- Added CV section with a vertical timeline, work/education differentiation, and downloadable placeholder PDF support.
