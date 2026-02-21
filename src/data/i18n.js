@@ -40,6 +40,8 @@ export const i18n = {
       status: 'Status',
       language: 'Language',
       stars: 'Stars',
+      forks: 'Forks',
+      license: 'License',
       updated: 'Updated',
     },
     meta: {
@@ -90,6 +92,8 @@ export const i18n = {
       status: 'Statut',
       language: 'Langage',
       stars: 'Étoiles',
+      forks: 'Forks',
+      license: 'Licence',
       updated: 'Mis à jour',
     },
     meta: {

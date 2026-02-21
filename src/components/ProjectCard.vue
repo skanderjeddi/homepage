@@ -97,6 +97,14 @@ const updatedDate = computed(() => {
         <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ project.metadata.stars ?? 0 }}</dd>
       </div>
       <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.forks }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ project.metadata.forks ?? 0 }}</dd>
+      </div>
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
+        <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.license }}</dt>
+        <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ project.metadata.license ?? '—' }}</dd>
+      </div>
+      <div class="rounded-md bg-slate-100 px-2 py-1 dark:bg-zinc-700/60">
         <dt class="text-slate-500 dark:text-zinc-400">{{ copy.labels.updated }}</dt>
         <dd class="font-medium text-slate-700 dark:text-zinc-200">{{ updatedDate ?? '—' }}</dd>
       </div>
