@@ -42,7 +42,7 @@ export const projects = [
       language: 'Vue',
       stars: 0,
       forks: 0,
-      license: null,
+      license: 'MIT',
       updatedAt: '2026-02-21T20:45:29Z',
       repo: 'skanderjeddi/Homepage',
     },
