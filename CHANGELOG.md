@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added EN/FR content variants in personal, projects, and CV data with backwards-compatible fallbacks.
 - Added project repository metadata (status, language, stars, updated date) to project cards.
 - Added forks and license fields to project metadata cards.
+- Added GitHub Pages deployment workflow via GitHub Actions.
 
 ### Changed
 
@@ -21,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved avatar framing controls via data-driven `avatarPosition`.
 - Updated README to reflect the actual portfolio architecture, scripts, and customization workflow.
 - Updated GitHub repository About metadata (description, homepage URL, and topics).
+- Updated Vite and static asset paths for GitHub Pages project-site hosting under `/Homepage/`.
 
 ## [0.1.0] - 2026-02-21
 

@@ -8,7 +8,7 @@ import CVTimeline from '@/components/CVTimeline.vue'
 const copy = computed(() => i18n[locale.value])
 const isFrench = computed(() => locale.value === 'fr')
 
-const cvDownloadLink = '/cv.pdf'
+const cvDownloadLink = `${import.meta.env.BASE_URL}cv.pdf`
 
 const timelineEntries = computed(() =>
   cv.map((entry: any) => ({

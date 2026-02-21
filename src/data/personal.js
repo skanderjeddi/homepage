@@ -1,8 +1,10 @@
+const base = import.meta.env.BASE_URL
+
 export const personal = {
   name: 'Skander Jeddi',
   tagline: 'Développeur orienté produit · Algorithmique, systèmes et interfaces web performantes',
   taglineEn: 'Product-minded developer · Algorithms, systems, and high-performance web interfaces',
-  avatar: '/avatar.jpg', // drop your photo in /public
+  avatar: `${base}avatar.jpg`,
   avatarPosition: '50% 24%', // adjust to center your face better
   email: 'skanderjeddi@fastmail.com',
   location: 'Labruguière, France',
@@ -39,8 +41,8 @@ I’m comfortable across low-level systems (C++/Rust), advanced algorithms, and 
     projectsTarget: '#projects',
     cvLabel: 'Télécharger mon CV',
     cvLabelEn: 'Download CV',
-    cvHref: '/cv.pdf', // drop your cv.pdf in /public
-    cvHrefEn: '/cv.pdf',
+    cvHref: `${base}cv.pdf`,
+    cvHrefEn: `${base}cv.pdf`,
   },
   skills: [
     // Languages
