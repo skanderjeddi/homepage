@@ -11,6 +11,9 @@ const localizedBio = computed(() => (isFrench.value ? personal.bio : (personal.b
 const localizedInterests = computed(() =>
   isFrench.value ? personal.interests : (personal.interestsEn ?? personal.interests),
 )
+const localizedLanguages = computed(() =>
+  isFrench.value ? personal.languages : (personal.languagesEn ?? personal.languages),
+)
 </script>
 
 <template>
@@ -37,6 +40,19 @@ const localizedInterests = computed(() =>
       <h3 class="text-lg font-semibold text-slate-900 dark:text-white">{{ copy.sections.interestsTitle }}</h3>
       <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700 dark:text-zinc-300">
         <li v-for="interest in localizedInterests" :key="interest">{{ interest }}</li>
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <h3 class="text-lg font-semibold text-slate-900 dark:text-white">{{ copy.sections.languagesTitle }}</h3>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        <li
+          v-for="language in localizedLanguages"
+          :key="language"
+          class="rounded-full border border-slate-300 px-3 py-1 text-sm font-medium text-slate-700 dark:border-zinc-600 dark:text-zinc-200"
+        >
+          {{ language }}
+        </li>
       </ul>
     </div>
   </section>

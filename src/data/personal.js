@@ -1,23 +1,24 @@
 export const personal = {
   name: 'Skander Jeddi',
-  tagline: 'Développeur passionné · Maths, Algorithmique & Web',
-  taglineEn: 'Passionate developer · Math, Algorithms & Web',
+  tagline: 'Développeur orienté produit · Algorithmique, systèmes et interfaces web performantes',
+  taglineEn: 'Product-minded developer · Algorithms, systems, and high-performance web interfaces',
   avatar: '/avatar.jpg', // drop your photo in /public
   avatarPosition: '50% 24%', // adjust to center your face better
   email: 'skanderjeddi@fastmail.com',
   location: 'Labruguière, France',
-  bio: `Double master en mathématiques et informatique (Cryptographie) à l'Université Paris Cité.
-J'aime concevoir des solutions robustes qui mêlent rigueur algorithmique et expérience utilisateur soignée.
-Que ce soit du bas niveau en C++ ou une interface Vue.js, j'apporte la même exigence : du code propre, performant et maintenable.`,
-  bioEn: `Dual master’s degree in Mathematics and Computer Science (Cryptography) at Université Paris Cité.
-I enjoy building robust solutions that combine algorithmic rigor with polished user experience.
-From low-level C++ systems to Vue.js interfaces, I apply the same standards: clean, performant, maintainable code.`,
+  bio: `Ingénieur logiciel avec un double master en mathématiques et informatique (cryptographie) à l’Université Paris Cité.
+J’aime construire des produits utiles, en partant d’une base solide : architecture claire, performance mesurée et qualité de code durable.
+Je navigue aussi bien entre le bas niveau (C++/Rust), l’algorithmique avancée et le développement front moderne avec Vue.js.`,
+  bioEn: `Software engineer with a dual master’s degree in Mathematics and Computer Science (Cryptography) from Université Paris Cité.
+I enjoy building useful products on top of solid foundations: clear architecture, measured performance, and maintainable code quality.
+I’m comfortable across low-level systems (C++/Rust), advanced algorithms, and modern frontend development with Vue.js.`,
   interests: [
     'Développement open-source',
     'Algorithmique & optimisation',
     'Intelligence artificielle',
     'Compétitions de programmation',
     'Visualisation de données',
+    'Outillage développeur',
   ],
   interestsEn: [
     'Open-source development',
@@ -25,6 +26,7 @@ From low-level C++ systems to Vue.js interfaces, I apply the same standards: cle
     'Artificial intelligence',
     'Programming competitions',
     'Data visualization',
+    'Developer tooling',
   ],
   social: {
     github: 'https://github.com/skanderjeddi',
@@ -64,4 +66,5 @@ From low-level C++ systems to Vue.js interfaces, I apply the same standards: cle
     'Cryptographie',
   ],
   languages: ['Français', 'Anglais', 'Arabe', 'Espagnol'],
+  languagesEn: ['French', 'English', 'Arabic', 'Spanish'],
 }
