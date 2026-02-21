@@ -37,7 +37,7 @@ const timelineEntries = computed(() =>
 
       <a
         :href="cvDownloadLink"
-        class="inline-flex items-center rounded-md bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-zinc-600 dark:hover:bg-zinc-500"
+        class="inline-flex items-center rounded-md bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-violet-500 dark:hover:bg-violet-400"
         download
       >
         {{ copy.labels.downloadCv }}

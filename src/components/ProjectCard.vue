@@ -67,7 +67,7 @@ const demoLabel = computed(() => props.project.demoLabel ?? copy.value.labels.li
         :href="project.demo"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center rounded-md bg-emerald-500 px-3 py-2 text-sm font-medium text-white transition hover:bg-emerald-400 dark:bg-zinc-600 dark:hover:bg-zinc-500"
+        class="inline-flex items-center rounded-md bg-emerald-500 px-3 py-2 text-sm font-medium text-white transition hover:bg-emerald-400 dark:bg-emerald-500 dark:hover:bg-emerald-400"
       >
         {{ demoLabel }}
       </a>

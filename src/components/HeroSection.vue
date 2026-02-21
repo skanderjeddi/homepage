@@ -26,7 +26,7 @@ const localizedCvHref = computed(() =>
   <section id="hero" class="scroll-mt-24 py-14 sm:py-20">
     <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
       <div>
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-600 dark:text-zinc-400">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-300">
           {{ personal.location }}
         </p>
         <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
@@ -37,7 +37,7 @@ const localizedCvHref = computed(() =>
         <div class="mt-8 flex flex-wrap gap-3">
           <a
             :href="personal.cta.projectsTarget"
-            class="inline-flex items-center rounded-md bg-violet-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-zinc-600 dark:hover:bg-zinc-500"
+            class="inline-flex items-center rounded-md bg-violet-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-violet-500 dark:hover:bg-violet-400"
           >
             {{ localizedProjectsLabel }}
           </a>
