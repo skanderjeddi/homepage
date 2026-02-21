@@ -3,6 +3,7 @@ export const personal = {
   tagline: 'Développeur passionné · Maths, Algorithmique & Web',
   taglineEn: 'Passionate developer · Math, Algorithms & Web',
   avatar: '/avatar.jpg', // drop your photo in /public
+  avatarPosition: '50% 24%', // adjust to center your face better
   email: 'skanderjeddi@fastmail.com',
   location: 'Labruguière, France',
   bio: `Double master en mathématiques et informatique (Cryptographie) à l'Université Paris Cité.
@@ -36,7 +37,7 @@ From low-level C++ systems to Vue.js interfaces, I apply the same standards: cle
     projectsTarget: '#projects',
     cvLabel: 'Télécharger mon CV',
     cvLabelEn: 'Download CV',
-    cvHref: '/CV.pdf', // drop your CV.pdf in /public
+    cvHref: '/cv.pdf', // drop your cv.pdf in /public
     cvHrefEn: '/cv.pdf',
   },
   skills: [

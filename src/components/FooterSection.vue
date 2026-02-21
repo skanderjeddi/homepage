@@ -9,13 +9,13 @@ const copy = computed(() => i18n[locale.value])
 </script>
 
 <template>
-  <footer class="border-t border-slate-200 py-8 dark:border-slate-700">
-    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 text-sm text-slate-600 sm:flex-row sm:items-center sm:px-6 lg:px-8 dark:text-slate-300">
+  <footer class="border-t border-slate-200 py-8 dark:border-zinc-700">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 text-sm text-slate-600 sm:flex-row sm:items-center sm:px-6 lg:px-8 dark:text-zinc-300">
       <p>© {{ currentYear }} {{ personal.name }}. {{ copy.labels.allRights }}</p>
 
       <div class="flex items-center gap-4">
-        <a :href="personal.social.github" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-300">{{ copy.labels.github }}</a>
-        <a :href="personal.social.linkedin" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-cyan-300">{{ copy.labels.linkedin }}</a>
+        <a :href="personal.social.github" target="_blank" rel="noopener noreferrer" class="hover:text-violet-600 dark:hover:text-white">{{ copy.labels.github }}</a>
+        <a :href="personal.social.linkedin" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-white">{{ copy.labels.linkedin }}</a>
       </div>
     </div>
   </footer>

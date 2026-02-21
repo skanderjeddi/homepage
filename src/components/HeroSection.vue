@@ -26,24 +26,24 @@ const localizedCvHref = computed(() =>
   <section id="hero" class="scroll-mt-24 py-14 sm:py-20">
     <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
       <div>
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-sky-600 dark:text-sky-300">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-600 dark:text-zinc-400">
           {{ personal.location }}
         </p>
         <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
           {{ personal.name }}
         </h1>
-        <p class="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-300">{{ localizedTagline }}</p>
+        <p class="mt-4 max-w-2xl text-lg text-slate-700 dark:text-zinc-300">{{ localizedTagline }}</p>
 
         <div class="mt-8 flex flex-wrap gap-3">
           <a
             :href="personal.cta.projectsTarget"
-            class="inline-flex items-center rounded-md bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
+            class="inline-flex items-center rounded-md bg-violet-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-zinc-600 dark:hover:bg-zinc-500"
           >
             {{ localizedProjectsLabel }}
           </a>
           <a
             :href="localizedCvHref"
-            class="inline-flex items-center rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+            class="inline-flex items-center rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
           >
             {{ localizedCvLabel }}
           </a>
@@ -53,7 +53,8 @@ const localizedCvHref = computed(() =>
       <img
         :src="personal.avatar"
         :alt="`${personal.name} avatar`"
-        class="h-48 w-48 rounded-2xl border border-slate-200 object-cover shadow-sm sm:h-56 sm:w-56 dark:border-slate-700"
+        :style="{ objectPosition: personal.avatarPosition ?? '50% 24%' }"
+        class="h-48 w-48 rounded-2xl border border-slate-200 object-cover shadow-sm sm:h-56 sm:w-56 dark:border-zinc-700"
       />
     </div>
   </section>

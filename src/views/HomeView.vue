@@ -14,10 +14,10 @@ const copy = computed(() => i18n[locale.value])
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50">
+  <div class="min-h-screen bg-slate-50 text-slate-900 dark:bg-zinc-900 dark:text-zinc-50">
     <a
       href="#hero"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-sky-500 focus:px-3 focus:py-2 focus:text-white"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-violet-500 focus:px-3 focus:py-2 focus:text-white"
     >
       {{ copy.labels.skipToContent }}
     </a>

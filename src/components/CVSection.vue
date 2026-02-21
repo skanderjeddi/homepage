@@ -8,7 +8,7 @@ import CVTimeline from '@/components/CVTimeline.vue'
 const copy = computed(() => i18n[locale.value])
 const isFrench = computed(() => locale.value === 'fr')
 
-const cvDownloadLink = computed(() => (isFrench.value ? '/CV.pdf' : '/cv.pdf'))
+const cvDownloadLink = '/cv.pdf'
 
 const timelineEntries = computed(() =>
   cv.map((entry: any) => ({
@@ -30,14 +30,14 @@ const timelineEntries = computed(() =>
     <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
       <div>
         <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">{{ copy.sections.cvTitle }}</h2>
-        <p class="mt-3 max-w-2xl text-slate-700 dark:text-slate-300">
+        <p class="mt-3 max-w-2xl text-slate-700 dark:text-zinc-300">
           {{ copy.sections.cvSubtitle }}
         </p>
       </div>
 
       <a
         :href="cvDownloadLink"
-        class="inline-flex items-center rounded-md bg-sky-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-400"
+        class="inline-flex items-center rounded-md bg-violet-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-400 dark:bg-zinc-600 dark:hover:bg-zinc-500"
         download
       >
         {{ copy.labels.downloadCv }}
