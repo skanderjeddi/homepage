@@ -17,3 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added dynamic Projects section with reusable project cards, tech badges, and GitHub/live demo links.
 - Added CV section with a vertical timeline, work/education differentiation, and downloadable placeholder PDF support.
 - Added Contact section and minimal footer using centralized social/email data.
+- Added entrance transitions, SEO/OG metadata, and accessibility improvements (skip link and ARIA enhancements).

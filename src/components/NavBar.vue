@@ -78,6 +78,8 @@ onMounted(() => {
         <button
           class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 text-slate-700 transition hover:bg-slate-100 md:hidden dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
           aria-label="Toggle navigation menu"
+          :aria-expanded="isMobileMenuOpen"
+          aria-controls="mobile-menu"
           type="button"
           @click="isMobileMenuOpen = !isMobileMenuOpen"
         >
@@ -88,6 +90,7 @@ onMounted(() => {
 
     <div
       v-if="isMobileMenuOpen"
+      id="mobile-menu"
       class="border-t border-slate-200 bg-white px-4 py-3 md:hidden dark:border-slate-800 dark:bg-slate-950"
     >
       <div class="flex flex-col gap-2">
