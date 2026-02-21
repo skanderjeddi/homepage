@@ -4,6 +4,8 @@ import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
 import CVSection from '@/components/CVSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
+import FooterSection from '@/components/FooterSection.vue'
 </script>
 
 <template>
@@ -15,7 +17,9 @@ import CVSection from '@/components/CVSection.vue'
       <AboutSection />
       <ProjectsSection />
       <CVSection />
-      <section id="contact" class="min-h-[30vh] py-12"></section>
+      <ContactSection />
     </main>
+
+    <FooterSection />
   </div>
 </template>
