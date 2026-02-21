@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-02-21
+
 ### Added
 - Project audit completed for repository state, source structure, and installed dependencies.
 - Added required dependencies for portfolio implementation: Vue Router, Pinia, and Tailwind CSS.
