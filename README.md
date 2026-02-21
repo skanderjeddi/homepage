@@ -1,48 +1,74 @@
-# homepage
+# Skander Jeddi — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Personal portfolio website built with Vue 3 + Vite, fully data-driven and bilingual (FR/EN).
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3 (Composition API, `<script setup>`)
+- Vue Router
+- Pinia
+- Tailwind CSS v4
+- TypeScript
 
-## Recommended Browser Setup
+## Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Bilingual UI with persistent language toggle (French / English)
+- Dark mode with persistent preference
+- Responsive navigation with mobile menu and smooth scrolling
+- Data-driven sections (Hero, About, Projects, CV, Contact, Footer)
+- CV download from `public/cv.pdf`
+- SEO metadata updated dynamically based on selected language
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Quick Start
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+App runs at `http://localhost:5173` by default.
 
-```sh
-npm run build
+## Available Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Type-check + production build
+- `npm run build-only` — Production build only
+- `npm run preview` — Preview production build locally
+- `npm run type-check` — Run Vue TypeScript checks
+- `npm run lint` — Run linters
+
+## Customize Content (Main Entry Point)
+
+Most personalization is done in `src/data/`:
+
+- `src/data/personal.js`
+  - Name, tagline, bio, avatar, social links, CTA labels, skills, interests
+  - Language-specific variants (`*En` fields)
+  - `avatarPosition` to fine-tune image framing
+- `src/data/projects.js`
+  - Project cards and links
+- `src/data/cv.js`
+  - CV timeline entries (work/education)
+- `src/data/i18n.js`
+  - UI labels and section copy for EN/FR
+
+## Assets
+
+- Avatar image: `public/avatar.jpg`
+- CV file: `public/cv.pdf`
+
+## Project Structure
+
+```text
+src/
+  components/
+  data/
+  router/
+  stores/
+  views/
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Notes
 
-```sh
-npm run lint
-```
+- If language toggle changes text but not metadata, ensure JavaScript is enabled (metadata updates at runtime).
+- If CV download opens HTML, verify the file exists at `public/cv.pdf` and links use lowercase `/cv.pdf`.
