@@ -35,7 +35,8 @@ export const projects = [
       'This website — built with Vue 3, Vite, and Tailwind CSS. Data-oriented architecture: all content is decoupled from components and editable from /src/data. Dark mode, responsive layout, and scroll animations.',
     tags: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/skanderjeddi/Homepage',
-    demo: null,
+    demo: 'https://skanderjeddi.github.io/Homepage/',
+    demoLabel: 'Live Site',
     metadata: {
       statusEn: 'Active',
       statusFr: 'Actif',

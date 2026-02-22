@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated README to reflect the actual portfolio architecture, scripts, and customization workflow.
 - Updated GitHub repository About metadata (description, homepage URL, and topics).
 - Updated Vite and static asset paths for GitHub Pages project-site hosting under `/Homepage/`.
+- Added the live deployed URL to README and linked the portfolio project card to the live site.
 
 ## [0.1.0] - 2026-02-21
 

@@ -2,6 +2,10 @@
 
 Personal portfolio website built with Vue 3 + Vite, fully data-driven and bilingual (FR/EN).
 
+## Live Site
+
+- https://skanderjeddi.github.io/Homepage/
+
 ## Tech Stack
 
 - Vue 3 (Composition API, `<script setup>`)
