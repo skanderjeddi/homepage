@@ -23,10 +23,100 @@ const themeLabel = computed(() =>
 
 const languageLabel = computed(() => (locale.value === 'en' ? 'FR' : 'EN'))
 
+const sectionAnimations = new WeakMap<HTMLElement, Animation>()
+const sectionPulseAnimations = new WeakMap<HTMLElement, Animation>()
+
+const waitForScrollSettle = (callback: () => void) => {
+  let stableFrames = 0
+  let lastY = window.scrollY
+
+  const tick = () => {
+    const currentY = window.scrollY
+    if (Math.abs(currentY - lastY) < 0.5) {
+      stableFrames += 1
+    } else {
+      stableFrames = 0
+    }
+
+    lastY = currentY
+
+    if (stableFrames >= 4) {
+      callback()
+      return
+    }
+
+    window.requestAnimationFrame(tick)
+  }
+
+  window.requestAnimationFrame(tick)
+}
+
+const triggerSectionAnimation = (element: Element) => {
+  const target =
+    (element.closest('.section-reveal') as HTMLElement | null) ?? (element as HTMLElement)
+
+  const previousAnimation = sectionAnimations.get(target)
+  previousAnimation?.cancel()
+  const cueTarget =
+    (target.querySelector('h1, h2, h3') as HTMLElement | null) ??
+    (target.querySelector('p') as HTMLElement | null)
+
+  if (cueTarget) {
+    const previousPulseAnimation = sectionPulseAnimations.get(cueTarget)
+    previousPulseAnimation?.cancel()
+  }
+
+  const animation = target.animate(
+    [
+      {
+        transform: 'translate3d(0, 4px, 0)',
+        opacity: 0.7,
+      },
+      {
+        transform: 'translate3d(0, 0, 0)',
+        opacity: 1,
+      },
+    ],
+    {
+      duration: 700,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      fill: 'none',
+      composite: 'replace',
+    },
+  )
+
+  if (cueTarget) {
+    const pulseAnimation = cueTarget.animate(
+      [
+        {
+          textShadow: '0 0 0 rgba(139, 92, 246, 0)',
+        },
+        {
+          textShadow: '0 0 14px rgba(139, 92, 246, 0.35)',
+        },
+        {
+          textShadow: '0 0 0 rgba(139, 92, 246, 0)',
+        },
+      ],
+      {
+        duration: 860,
+        easing: 'ease-out',
+        fill: 'none',
+        composite: 'replace',
+      },
+    )
+
+    sectionPulseAnimations.set(cueTarget, pulseAnimation)
+  }
+
+  sectionAnimations.set(target, animation)
+}
+
 const scrollToTarget = (target: string) => {
   const element = document.querySelector(target)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    waitForScrollSettle(() => triggerSectionAnimation(element))
   }
   isMobileMenuOpen.value = false
 }
@@ -53,8 +143,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/90">
-    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Primary">
+  <header
+    class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/90"
+  >
+    <nav
+      class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8"
+      aria-label="Primary"
+    >
       <button
         class="text-lg font-semibold text-slate-900 dark:text-zinc-50"
         @click="scrollToTarget('#hero')"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onBeforeUnmount, onMounted } from 'vue'
 import NavBar from '@/components/NavBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
@@ -11,6 +11,40 @@ import { i18n } from '@/data/i18n.js'
 import { locale } from '@/stores/locale'
 
 const copy = computed(() => i18n[locale.value])
+
+let revealObserver: IntersectionObserver | null = null
+
+onMounted(() => {
+  const revealItems = Array.from(document.querySelectorAll<HTMLElement>('.section-reveal'))
+  if (!revealItems.length) return
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'))
+    return
+  }
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-visible')
+        revealObserver?.unobserve(entry.target)
+      })
+    },
+    {
+      threshold: 0.18,
+      rootMargin: '0px 0px -8% 0px',
+    },
+  )
+
+  revealItems.forEach((item) => revealObserver?.observe(item))
+})
+
+onBeforeUnmount(() => {
+  revealObserver?.disconnect()
+  revealObserver = null
+})
 </script>
 
 <template>
@@ -25,21 +59,21 @@ const copy = computed(() => i18n[locale.value])
     <NavBar />
 
     <main id="main-content" class="mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
-      <Transition name="fade-up" appear>
+      <div class="section-reveal">
         <HeroSection />
-      </Transition>
-      <Transition name="fade-up" appear>
+      </div>
+      <div class="section-reveal">
         <AboutSection />
-      </Transition>
-      <Transition name="fade-up" appear>
+      </div>
+      <div class="section-reveal">
         <ProjectsSection />
-      </Transition>
-      <Transition name="fade-up" appear>
+      </div>
+      <div class="section-reveal">
         <CVSection />
-      </Transition>
-      <Transition name="fade-up" appear>
+      </div>
+      <div class="section-reveal">
         <ContactSection />
-      </Transition>
+      </div>
     </main>
 
     <FooterSection />
@@ -47,12 +81,24 @@ const copy = computed(() => i18n[locale.value])
 </template>
 
 <style scoped>
-.fade-up-enter-active {
-  transition: opacity 450ms ease, transform 450ms ease;
+.section-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
 }
 
-.fade-up-enter-from {
-  opacity: 0;
-  transform: translateY(14px);
+.section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 </style>
