@@ -67,6 +67,32 @@ I’m comfortable across low-level systems (C++/Rust), advanced algorithms, and 
     'Systèmes distribués',
     'Cryptographie',
   ],
+  languageProficiencies: [
+    {
+      name: 'Français',
+      nameEn: 'French',
+      level: 'Courant',
+      levelEn: 'Fluent',
+    },
+    {
+      name: 'Anglais',
+      nameEn: 'English',
+      level: 'Courant',
+      levelEn: 'Fluent',
+    },
+    {
+      name: 'Arabe',
+      nameEn: 'Arabic',
+      level: 'Courant',
+      levelEn: 'Fluent',
+    },
+    {
+      name: 'Espagnol',
+      nameEn: 'Spanish',
+      level: 'Conversationnel',
+      levelEn: 'Conversational',
+    },
+  ],
   languages: ['Français', 'Anglais', 'Arabe', 'Espagnol'],
   languagesEn: ['French', 'English', 'Arabic', 'Spanish'],
 }
