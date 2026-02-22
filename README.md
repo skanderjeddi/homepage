@@ -4,7 +4,7 @@ Personal portfolio website built with Vue 3 + Vite, fully data-driven and biling
 
 ## Live Site
 
-- https://skanderjeddi.github.io/Homepage/
+- https://skanderjeddi.github.io/homepage/
 
 ## Tech Stack
 

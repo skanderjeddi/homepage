@@ -32,8 +32,8 @@ I’m comfortable across low-level systems (C++/Rust), advanced algorithms, and 
   ],
   social: {
     github: 'https://github.com/skanderjeddi',
-    linkedin: 'https://linkedin.com/in/skanderjeddi', // TODO: update if different
-    website: 'https://skanderjeddi.dev', // TODO: update with real URL
+    linkedin: 'https://linkedin.com/in/skander-jeddi',
+    website: 'https://skanderjeddi.github.io/homepage/',
   },
   cta: {
     projectsLabel: 'Voir mes projets',

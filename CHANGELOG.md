@@ -22,12 +22,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved avatar framing controls via data-driven `avatarPosition`.
 - Updated README to reflect the actual portfolio architecture, scripts, and customization workflow.
 - Updated GitHub repository About metadata (description, homepage URL, and topics).
-- Updated Vite and static asset paths for GitHub Pages project-site hosting under `/Homepage/`.
+- Updated Vite and static asset paths for GitHub Pages project-site hosting under `/homepage/`.
 - Added the live deployed URL to README and linked the portfolio project card to the live site.
+- Updated project and website links to use the renamed lowercase repository path (`homepage`).
 
 ## [0.1.0] - 2026-02-21
 
 ### Added
+
 - Project audit completed for repository state, source structure, and installed dependencies.
 - Added required dependencies for portfolio implementation: Vue Router, Pinia, and Tailwind CSS.
 - Initialized project changelog using Keep a Changelog format.
